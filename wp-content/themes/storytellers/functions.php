@@ -106,7 +106,6 @@ if(isset($_POST['form_submit'])) {
 	$subject 		= wp_strip_all_tags($_POST['company']);
 	$body 			= wp_strip_all_tags($_POST['message']);
 	$headers[] 	= 'Content-Type: text/html; charset=UTF-8';
-	//$headers[] 	= 'From: ' . wp_strip_all_tags($_POST['full_name']) . ' ' . wp_strip_all_tags($_POST['email_address']);
 
 	wp_mail( $to, $subject, $body, $headers );
 }

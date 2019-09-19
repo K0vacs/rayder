@@ -86,3 +86,27 @@ function client_list_shortcode( $atts ) {
 	$output = ob_get_clean();
 	return $output;
 }
+
+add_action( 'phpmailer_init', 'send_smtp_email' );
+function send_smtp_email( $phpmailer ) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = SMTP_HOST;
+    $phpmailer->SMTPAuth   = SMTP_AUTH;
+    $phpmailer->Port       = SMTP_PORT;
+    $phpmailer->SMTPSecure = SMTP_SECURE;
+    $phpmailer->Username   = SMTP_USERNAME;
+    $phpmailer->Password   = SMTP_PASSWORD;
+    $phpmailer->From       = SMTP_FROM;
+    $phpmailer->FromName   = SMTP_FROMNAME;
+}
+
+if(isset($_POST['form_submit'])) {
+
+	$to 				= 'mr.f.kovacs@gmail.com';
+	$subject 		= wp_strip_all_tags($_POST['company']);
+	$body 			= wp_strip_all_tags($_POST['message']);
+	$headers[] 	= 'Content-Type: text/html; charset=UTF-8';
+	//$headers[] 	= 'From: ' . wp_strip_all_tags($_POST['full_name']) . ' ' . wp_strip_all_tags($_POST['email_address']);
+
+	wp_mail( $to, $subject, $body, $headers );
+}

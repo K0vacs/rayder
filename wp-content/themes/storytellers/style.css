@@ -99,6 +99,10 @@ a {
   color: #1d1a1a;
 }
 
+.main-menu .current_page_item a {
+  color: #1d1a1a;
+}
+
 .burger-menu {
   display: none;
 }
@@ -153,6 +157,10 @@ a {
 
 .page-id-236 .main-menu a:hover,
 .error404 .main-menu a:hover {
+  color: #ed1824;
+}
+
+.page-id-236 .current_page_item a {
   color: #ed1824;
 }
 

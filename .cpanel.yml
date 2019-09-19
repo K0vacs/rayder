@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/rayderme/public_html/
-    - /bin/cp -R logs $DEPLOYPATH
+    - /bin cp * $DEPLOYPATH

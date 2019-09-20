@@ -1,8 +1,8 @@
 <section class="grey-background">
 	<div class="padded-section">
 		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-		<h2 class="h2">Clients &amp; Campaigns</h2>
-		<h3 class="h3">Stories we've told for the brands we love</h3>
+		<h2>Clients &amp; Campaigns</h2>
+		<h3 class="client-h3">Stories we've told for the brands we love</h3>
 		<div class="wp-block-columns has-2-columns">
 			<div class="wp-block-column">
 				<div class="wp-block-image">

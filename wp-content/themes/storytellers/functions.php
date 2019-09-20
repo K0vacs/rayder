@@ -102,7 +102,7 @@ function send_smtp_email( $phpmailer ) {
 
 if(isset($_POST['form_submit'])) {
 
-	$to 				= 'mr.f.kovacs@gmail.com';
+	$to 				= 'info@rayder.media';
 	$subject 		= wp_strip_all_tags($_POST['company']);
 	$body 			= wp_strip_all_tags($_POST['message']);
 	$headers[] 	= 'Content-Type: text/html; charset=UTF-8';

@@ -57,10 +57,10 @@ function videoEnded(event) {
 function burgerNav() {
   var navList = document.getElementsByClassName("menu-main-menu-container");
 
-  if (navList[0].style.display === "block") {
+  if (navList[0].style.display === "flex") {
     navList[0].style.display = "none";
   } else {
-    navList[0].style.display = "block";
+    navList[0].style.display = "flex";
   }
 }
 
@@ -72,6 +72,6 @@ window.addEventListener("resize", function(){
     navList[0].style.display = "none";
    }
    else{
-     navList[0].style.display = "block";
+     navList[0].style.display = "flex";
    }
 });

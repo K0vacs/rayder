@@ -1,0 +1,6 @@
+<IfModule mod_headers.c>
+    Header unset Link
+    <FilesMatch "\.(html|html_gzip|html_br)$">
+    Header add Link '</rayder/wp-content/cache/minify/3de7c.js>; rel=preload; as=script'
+    </FilesMatch>
+</IfModule>
